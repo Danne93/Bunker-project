@@ -1009,10 +1009,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGameActive: 0
   isGamePaused: 0
-  playerMoney: 0
+  score: 0
   gameOverScreen: {fileID: 1843574719}
   healthText: {fileID: 259556197}
-  moneyText: {fileID: 1235263412}
+  scoreText: {fileID: 1235263412}
 --- !u!4 &862823528
 Transform:
   m_ObjectHideFlags: 0
@@ -1258,7 +1258,7 @@ GameObject:
   - component: {fileID: 1235263413}
   - component: {fileID: 1235263412}
   m_Layer: 5
-  m_Name: MoneyText
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1284,7 +1284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Money
+  m_text: 'Score: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

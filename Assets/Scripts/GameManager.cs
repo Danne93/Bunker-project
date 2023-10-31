@@ -10,11 +10,11 @@ public class GameManager : MonoBehaviour
 {
     public bool isGameActive;
     public bool isGamePaused = false;
-    public int playerMoney;
+    public int score;
     Bunker playerScript;
     public GameObject gameOverScreen;
     public TextMeshProUGUI healthText;
-    public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI scoreText;
     
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab) && isGameActive)
         {
             PauseGame();
-            OpenBuyMenu();
+            //OpenBuyMenu();
         }
 
         if (playerScript.health <= 0)
@@ -43,12 +43,12 @@ public class GameManager : MonoBehaviour
             healthText.text = "HP: " + playerScript.health;
         }
 
-        moneyText.text = "Money: " + playerMoney + "$";
+        scoreText.text = "Score: " + score;
     }
 
-    public void AddMoney(int i)
+    public void AddScore(int i)
     {
-        playerMoney = playerMoney + i;
+        score = score + i;
     }
 
     public void PauseGame()
@@ -72,7 +72,6 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverScreen.SetActive(true);
-        PauseGame();
     }
 
     public void RestartGame()

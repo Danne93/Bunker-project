@@ -56,7 +56,7 @@ public class Unit : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            gameManager.AddMoney(value);
+            gameManager.AddScore(value);
         }
     }
     public void Heal(int h)
